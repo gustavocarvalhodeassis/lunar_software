@@ -5,17 +5,17 @@ const iconSize = 35
 export const aboutCardData = [
     {
         icon: <CgFileDocument size={iconSize} />,
-        text: 'Documentos fiscais',
+        text: <>Documentos <br /> fiscais.</>,
         rec: true,
     },
     {
         icon: <CgViewComfortable size={iconSize} />,
-        text: 'Controle de estoque',
+        text: <>Controle <br /> de estoque.</>,
         rec: false,
     },
     {
         icon: <CgDollar size={iconSize} />,
-        text: 'Controle financeiro',
+        text: <>Controle <br /> financeiro.</>,
         rec: false,
     },
 
