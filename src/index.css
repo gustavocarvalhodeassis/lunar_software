@@ -8,6 +8,9 @@
   --content-gap: 60px;
   --content-col-gap: 40px;
   --content-row-gap: 100px;
+  --button-border-radius: 50px;
+  --content-border-radius: 5px;
+  --button-padding: 15px 30px;
   --transition: all 0.25s cubic-bezier(.51, .92, .24, 1.15);
   --accent-color: #7361E0;
   --light-color: #fff;
@@ -19,11 +22,14 @@
   --content-index-3: 2 / 1 / 3 / 3;
   --content-display: grid;
   --content-margin: 120px 0;
+  --title-font-weight: bold;
+  --title-font-size: 1.5rem;
+  --p-size: 0.9rem;
 }
 
 @media screen and (max-width: 1160px) {
   :root {
-    --container-max-width: none;
+    --container-max-width: -webkit-fill-available;
     --container-margin: 0 60px;
     --content-template-col: none;
     --content-template-row: none;
@@ -77,10 +83,10 @@ p {
 
 h1 {
   color: var(--dark-color);
-  font-size: 1.6875rem;
+  font-size: var(--title-font-size);
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: var(--p-size);
   color: var(--low-dark-color);
 }
