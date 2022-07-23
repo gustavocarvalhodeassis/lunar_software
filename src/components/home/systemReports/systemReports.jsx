@@ -27,7 +27,7 @@ const SystemReports = () => {
                     <h1 className='content-title'>O que alguns de nossos clientes disseram sobre o sistema.</h1>
                     <div className='content-action'>
                         <p className='content-p'>Algumas de nossas avaliações não estão amostra mas você pode verificar todas clicando abaixo...</p>
-                        <button className='btn text-btn'>Verificar todas as avaliações <CgArrowLongRight /></button>
+                        <button className='btn text-btn'>Verificar todas as avaliações <CgArrowLongRight size={35} /></button>
                     </div>
                 </div>
                 {

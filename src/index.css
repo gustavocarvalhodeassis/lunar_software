@@ -23,9 +23,9 @@
   --content-index-3: 2 / 1 / 3 / 3;
   --content-display: grid;
   --content-margin: 120px 0;
-  --title-font-weight: 500;
-  --title-font-size: 1.5rem;
-  --p-font-size: 0.9rem;
+  --title-font-weight: bold;
+  --title-font-size: 1.3rem;
+  --p-font-size: 1rem;
   --p-font-weight: 400;
 }
 
@@ -49,7 +49,7 @@
 @media screen and (max-width: 960px) {
   :root {
     --container-margin: 0 40px;
-    --content-margin: 40px 0;
+    --content-margin: 90px 0;
   }
 }
 

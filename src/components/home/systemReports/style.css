@@ -3,5 +3,5 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--content-margin);
+    margin: var(--content-margin);
 }

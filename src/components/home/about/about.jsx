@@ -1,7 +1,7 @@
 import React from "react";
 import { CgFileDocument } from 'react-icons/cg'
 import { aboutCardData } from "./data/cardData";
-import { socialData } from "./data/socialIconData";
+import { socialData } from "../../../data/socialIconData";
 import './style.css'
 
 const About = () => {

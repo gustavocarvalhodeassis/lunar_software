@@ -53,8 +53,9 @@
 .text-btn {
     background-color: transparent;
     color: var(--accent-color) !important;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: underline;
+    transition: all 0.25s ease !important;
 }
 
 .text-btn:hover {
@@ -62,7 +63,41 @@
     color: var(--accent-color) !important;
 }
 
+.input-form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+.ipt{
+    padding-left: 7px;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    background-color: #FAFAFB;
+    outline: 3px #DADAE2 solid;
+    border-radius: var(--content-border-radius);
+    border:  none;
+    transition: var(--transition);
+}
+.input-grid{
+    width: 100%;
+}
+
+.ipt:focus{
+    outline: 4px var(--accent-color) solid;
+}
+.ipt:hover{
+    background-color: #F1F1F4;
+}
+.input-form-action-button{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: end;
+    width: 100%;
+}
 .social-icon {
     cursor: pointer;
     transition: var(--transition);
@@ -162,17 +197,20 @@ figure {
     align-items: center;
     gap: var(--content-gap);
     transition: all 1s cubic-bezier(.51, .92, .24, 1.15);
-    animation: toggleTransition 1s ;
+    animation: toggleTransition 1s;
 }
-.system-reports.inactive{
+
+.system-reports.inactive {
     display: none;
-    
+
 }
+
 @keyframes toggleTransition {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -194,6 +232,7 @@ figure {
 .system-report-text {
     font-size: 1rem !important;
 }
+
 .system-report-p {
     font-size: 0.7rem !important;
 }
@@ -216,21 +255,50 @@ figure {
 .report-action-btn.left:hover {
     transform: scale(1.15) translate(-7px, 0);
 }
-.report-counter{
+
+.report-counter {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.counter{
+
+.counter {
     width: 10px;
     height: 10px;
     border-radius: 25px;
     background-color: #c4c4c4;
 }
-.counter.active{
+
+.counter.active {
     transform: scale(1.5);
     background-color: var(--accent-color);
 }
+
+.user-type {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-type-button {
+    color: var(--dark-color);
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--dark-color);
+    padding: 15px 30px;
+    border-radius: var(--button-border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-weight: bold;
+}
+
+.user-type-button.active {
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
 @media screen and (max-width: 1160px) {
     .cards-space {
         display: flex;

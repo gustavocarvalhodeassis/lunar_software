@@ -9,7 +9,7 @@ const SystemImages = () => {
                     <h1 className='content-title'>Algumas imagens de nosso sistema...</h1>
                     <div className='content-action'>
                         <p className='content-p'>Algumas de nossas imagens não estão amostra mas você pode verificar todas clicando abaixo...</p>
-                        <button className='btn text-btn'>Verificar todas as imagens <CgArrowLongRight /></button>
+                        <button className='btn text-btn'>Verificar todas as imagens <CgArrowLongRight size={35} /></button>
                     </div>
                 </div>
                 <div className='system-images'>
