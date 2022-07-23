@@ -34,7 +34,6 @@ const About = () => {
                         </p>
                     </div>
                     <div>
-
                     </div>
                     <div className="about-content-main">
                         <h1 className='content-title'>
