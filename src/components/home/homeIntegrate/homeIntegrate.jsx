@@ -4,11 +4,6 @@ import './style.css'
 
 const HomeIntegrate = () => {
 
-    const userType = ({
-        'color': '#191049 !important',
-        'backgroundColor': 'transparent !important'
-    })
-
     let active = 'user-type-button active'
     let inactive = 'user-type-button'
 
@@ -22,8 +17,6 @@ const HomeIntegrate = () => {
             setJur((jur = active))
             setFis((fis = inactive))
         }
-
-        console.log('jur: ' + jur + '; fis: ' + fis + ';')
     }
     const setUserTypeFis = () => {
         if (fis === active) {
@@ -32,8 +25,6 @@ const HomeIntegrate = () => {
             setFis((fis = active))
             setJur((jur = inactive))
         }
-
-        console.log('fis: ' + fis + '; jur: ' + jur + ';')
     }
 
     return (

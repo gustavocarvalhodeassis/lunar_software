@@ -1,0 +1,24 @@
+.user-type {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+}
+
+.user-type-button {
+     color: var(--dark-color);
+     background-color: transparent;
+     text-decoration: underline;
+     cursor: pointer;
+     color: var(--dark-color);
+     padding: 15px 30px;
+     border-radius: var(--button-border-radius);
+     font-size: 1rem;
+     transition: var(--transition);
+     font-weight: bold;
+}
+
+.user-type-button.active {
+     text-decoration: none;
+     background-color: var(--accent-color);
+     color: var(--light-color);
+}

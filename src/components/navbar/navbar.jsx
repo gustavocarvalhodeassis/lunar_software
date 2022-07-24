@@ -3,6 +3,7 @@ import Logo from '../logo/logo';
 import { navbarData } from './data/navbarData'
 import { CgMenu, CgClose } from 'react-icons/cg'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -80,24 +81,33 @@ const NavBar = () => {
                         {
                             navbarData.map((item, index) => {
                                 return (
-                                    <button key={index}>
-                                        <li
-                                            onClick={
-                                                () => {
-                                                    toggleMenu()
+                                    <Link to={item.link}>
+                                        <button key={index}>
+                                            <li
+                                                onClick={
+                                                    () => {
+                                                        toggleMenu()
+                                                    }
                                                 }
-                                            }
-
-                                        >
-                                            {item.name}
-                                        </li>
-                                    </button>
+                                            >
+                                                {item.name}
+                                            </li>
+                                        </button>
+                                    </Link>
                                 )
                             })
                         }
-                        <button className='btn filled-btn'>
-                            Integrar!
-                        </button>
+                        <Link to={'/integrar'}>
+                            <button
+                                onClick={
+                                    () => {
+                                        toggleMenu()
+                                    }
+                                }
+                                className='btn filled-btn'>
+                                Integrar!
+                            </button>
+                        </Link>
                     </ul>
                 </nav>
             </div>

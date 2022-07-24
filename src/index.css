@@ -63,9 +63,14 @@
   font-family: 'Poppins';
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 button {
@@ -96,10 +101,12 @@ p {
 ::-webkit-scrollbar {
   width: 3px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb {
   transition: var(--transition);
   background: var(--accent-color);

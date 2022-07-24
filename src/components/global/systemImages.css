@@ -1,0 +1,27 @@
+figure {
+    margin: 0;
+}
+
+.system-images {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.system-image-figure {
+    width: 540px;
+    border-radius: var(--content-border-radius);
+}
+
+@media screen and (max-width: 1160px) {
+    .system-image-figure {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .system-image-figure {
+        width: 100%;
+    }
+}

@@ -1,14 +1,14 @@
 export const navbarData = [
     {
-        link: '',
+        link: '/',
         name: 'Início',
     },
     {
-        link: '',
+        link: '/#about',
         name: 'Sobre',
     },
     {
-        link: '',
+        link: '/',
         name: 'Paineis',
     },
 ]

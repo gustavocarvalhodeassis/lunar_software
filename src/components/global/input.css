@@ -1,0 +1,32 @@
+.ipt {
+     padding-left: 7px;
+     padding-top: 10px;
+     font-weight: bold;
+     padding-bottom: 10px;
+     background-color: #FAFAFB;
+     outline: 3px #DADAE2 solid;
+     border-radius: var(--content-border-radius);
+     border: none;
+     transition: var(--transition);
+}
+
+.input-grid {
+     width: 100%;
+}
+
+.ipt:focus {
+     outline: 4px var(--accent-color) solid;
+}
+
+.ipt:hover {
+     background-color: #F1F1F4;
+}
+
+.input-form-action-button {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     flex-wrap: wrap;
+     justify-content: end;
+     width: 100%;
+}
