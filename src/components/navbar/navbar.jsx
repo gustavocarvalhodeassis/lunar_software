@@ -81,19 +81,35 @@ const NavBar = () => {
                         {
                             navbarData.map((item, index) => {
                                 return (
-                                    <Link to={item.link}>
-                                        <button key={index}>
-                                            <li
-                                                onClick={
-                                                    () => {
-                                                        toggleMenu()
+                                    <div key={index}>{
+                                        item.name === 'Sobre' ? <a href='/#about'>
+                                            <button key={index}>
+                                                <li
+                                                    onClick={
+                                                        () => {
+                                                            toggleMenu()
+                                                        }
                                                     }
-                                                }
-                                            >
-                                                {item.name}
-                                            </li>
-                                        </button>
-                                    </Link>
+                                                >
+                                                    {item.name}
+                                                </li>
+                                            </button>
+                                        </a>
+                                            :
+                                            <Link to={item.link} >
+                                                <button key={index}>
+                                                    <li
+                                                        onClick={
+                                                            () => {
+                                                                toggleMenu()
+                                                            }
+                                                        }
+                                                    >
+                                                        {item.name}
+                                                    </li>
+                                                </button>
+                                            </Link>
+                                    }</div>
                                 )
                             })
                         }
@@ -111,7 +127,7 @@ const NavBar = () => {
                     </ul>
                 </nav>
             </div>
-        </header>
+        </header >
     );
 }
 

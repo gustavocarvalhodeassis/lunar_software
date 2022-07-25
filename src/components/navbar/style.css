@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.25s ease;
+    font-size: var(--header-link-size);
     font-weight: bold;
     color: var(--dark-color);
     cursor: pointer;

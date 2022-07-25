@@ -27,6 +27,7 @@
   --title-font-size: 1.3rem;
   --p-font-size: 1rem;
   --p-font-weight: 400;
+  --header-link-size: 1rem;
 }
 
 @media screen and (max-width: 1160px) {
@@ -61,6 +62,7 @@
 
 * {
   font-family: 'Poppins';
+  scroll-behavior: smooth;
 }
 
 a{

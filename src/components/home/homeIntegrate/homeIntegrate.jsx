@@ -48,13 +48,13 @@ const HomeIntegrate = () => {
                         </div>
                         <div className='home-integrate-social-icons'>
                             {
-                                socialData.map((item) => {
+                                socialData.map((item, index) => {
                                     return (
-                                        <>
+                                        <div key={index}>
                                             {
                                                 item.icon
                                             }
-                                        </>
+                                        </div>
                                     )
                                 })
                             }
@@ -99,11 +99,10 @@ const HomeIntegrate = () => {
                             <input className='ipt input-grid' placeholder='EMAIL' />
                             <input className='ipt input-grid' placeholder='SENHA' />
                             <input className='ipt input-grid' placeholder='CNPJ' />
-                            <form className='input-form-action-button'>
+                            <div className='input-form-action-button'>
                                 <button className='btn text-btn'>Quero utilizar Lunar Software.</button>
                                 <input type={'button'} className='btn filled-btn' value='Próximo' />
-                            </form>
-
+                            </div>
                         </form>
                     </div>
                 </div>

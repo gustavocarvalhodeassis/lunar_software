@@ -4,7 +4,7 @@ export const navbarData = [
         name: 'Início',
     },
     {
-        link: '/#about',
+        link: '#about',
         name: 'Sobre',
     },
     {

@@ -11,7 +11,7 @@ const Router = () => {
         <BrowserRouter>
             <NavBar />
             <Routes>
-                <Route element={<Home />} path={'/'} />
+                <Route exact element={<Home />} path={'/'} />
                 <Route element={<IntegrateChose />} path={'/integrar'} />
                 <Route element={<IntegrateRepresentante />} path={'/integrar/representante'} />
                 <Route element={<IntegrateCliente />} path={'/integrar/cliente'} />
