@@ -5,6 +5,7 @@ import IntegrateChose from "./screens/integrar/integrateChose";
 import IntegrateRepresentante from "./screens/integrar/integrateRepresentante";
 import NavBar from "./components/navbar/navbar";
 import IntegrateCliente from "./screens/integrar/integrateCliente";
+import Footer from "./components/footer/footer";
 
 const Router = () => {
     return (
@@ -16,6 +17,7 @@ const Router = () => {
                 <Route element={<IntegrateRepresentante />} path={'/integrar/representante'} />
                 <Route element={<IntegrateCliente />} path={'/integrar/cliente'} />
             </Routes>
+            <Footer />
         </BrowserRouter>
     );
 }

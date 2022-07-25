@@ -24,6 +24,11 @@
     gap: 40px;
 }
 
+.social-list{
+    display: flex;
+    gap: 20px;
+}
+
 .social-icon {
     cursor: pointer;
     transition: var(--transition);
