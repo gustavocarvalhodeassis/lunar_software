@@ -12,14 +12,15 @@ const Router = () => {
         <BrowserRouter>
             <NavBar />
             <Routes>
-                <Route exact element={<Home />} path={'/'} />
-                <Route element={<IntegrateChose />} path={'/integrar'} />
-                <Route element={<IntegrateRepresentante />} path={'/integrar/representante'} />
-                <Route element={<IntegrateCliente />} path={'/integrar/cliente'} />
+                <Route exact element={<Home />} path={'/lunarteste'} />
+                <Route exact element={<IntegrateChose />} path={'/lunarteste/integrar'} />
+                <Route exact element={<IntegrateRepresentante />} path={'/lunarteste/integrar/representante'} />
+                <Route exact element={<IntegrateCliente />} path={'/lunarteste/integrar/cliente'} />
             </Routes>
             <Footer />
         </BrowserRouter>
     );
+
 }
 
 export default Router;

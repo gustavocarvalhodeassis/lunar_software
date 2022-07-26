@@ -5,84 +5,58 @@ import { Link } from "react-router-dom";
 
 const IntegrateGetInfoRep = () => {
 
-     let active = 'user-type-button active'
-     let inactive = 'user-type-button'
-
-     let [jur, setJur] = useState(active)
-     let [fis, setFis] = useState(inactive)
-
-     const setUserTypeJur = () => {
-          if (jur === active) {
-               return null
-          } else {
-               setJur((jur = active))
-               setFis((fis = inactive))
-          }
-     }
-     const setUserTypeFis = () => {
-          if (fis === active) {
-               return null
-          } else {
-               setFis((fis = active))
-               setJur((jur = inactive))
-          }
-     }
-
      return (
           <>
                <div className='push-title'>
-                    <Link to={'/integrar'}>
+                    <Link>
                          <CgArrowLeft size={50} color='var(--dark-color)' />
                     </Link>
                     <h1 className='push-title-text'>
                          Você escolheu Representante. por favor preencha os dados.
                     </h1>
                </div>
-               <div className="integrate-get-info-form">
+               <form className="integrate-get-info-form" action={'../painel/register-reseller.php'} method='post' >
+                    <input type={'hidden'} name='callback_url_success' value="../painel/cadastro-sucesso.html" />
                     <div className='place-1'>
                          <div className='user-type'>
-                              <button
-                                   onClick={
-                                        () => {
-                                             setUserTypeJur()
-                                        }
-                                   }
-                                   className={
-                                        'btn ' + jur}>
-                                   Pessoa Juridica
-                              </button>
-                              <button
-                                   onClick={
-                                        () => {
-                                             setUserTypeFis()
-                                        }
-                                   }
-                                   className={
-                                        'btn ' + fis}
-                              >
-                                   Pessoa Física
-                              </button>
+                              <label>Pessoa Física: </label><input type="radio" name="is_pj" value="0" /><br />
+                              <label>Pessoa Jurídica: </label><input type="radio" name="is_pj" value="1" /><br /><br />
                          </div>
                          <p className='content-p'>
                               Algumas informações sobre sua empresa, logo a frente, informações para contato.
                          </p>
-                         <form className='form-1'>
-                              <input className='ipt input-grid' placeholder='CNPJ' />
-                              <input className='ipt input-grid' placeholder='Razão Social' />
-                              <input className='ipt input-grid' placeholder='Fantasia' />
-                         </form>
+                         <div className='form-1'>
+                              <input name="name" type='text' className='ipt input-grid' placeholder='Nome' />
+                              <input name="cnpj" type='number' className='ipt input-grid' placeholder='CNPJ' />
+                              <input name="company_name" type='text' className='ipt input-grid' placeholder='Razão Social' />
+                              <input name="trading_name" type='text' className='ipt input-grid' placeholder='Fantasia' />
+                              <label className='check-box'>
+                                   Inscrição estadual ISENTA
+                                   <input name="ie_free" type='checkbox' placeholder='Incrição Estadual ISENTA' />
+                              </label>
+                              <input name="ie" type='number' className='ipt input-grid' placeholder='Incrição Estadual' />
+                              <input name="cpf" type='number' className='ipt input-grid' placeholder='CPF' />
+                         </div>
                     </div>
                     <div className="place-2">
-                         <form className='form-2'>
-                              <input className='ipt input-grid' placeholder='Email' />
-                              <input className='ipt input-grid' placeholder='Numero de telefone' />
+                         <div className='form-2'>
+                              <input name="email" type='email' className='ipt input-grid' placeholder='Email' />
+                              <input name="password" type="password" className='ipt input-grid' />
+                              <input name="phone" type='number' className='ipt input-grid' placeholder='Numero de telefone' />
+                              <input name="address" type='text' className='ipt input-grid' placeholder='Endereço' />
+                              <input name="address_number" type='number' className='ipt input-grid' placeholder='Numero' />
+                              <input type='text' className='ipt input-grid' placeholder='Bairro' />
+                              <input name="address_complement" type='text' className='ipt input-grid' placeholder='Complemento' />
+                              <input name="city" type='text' className='ipt input-grid' placeholder='Cidade' />
+                              <input name="uf" type='text' className='ipt input-grid' placeholder='Estado(UF)' />
+                              <input name="cep" type='number' className='ipt input-grid' placeholder='CEP' />
                               <div className='input-form-action-button'>
                                    <input type={'button'} className='btn text-btn' value="Quero ser cliente Lunar Software." />
-                                   <input type={'button'} className='btn filled-btn' value="Enviar" />
+                                   <input type={'submit'} className='btn filled-btn' value="Enviar" />
                               </div>
-                         </form>
+                         </div>
                     </div>
-               </div>
+               </form>
           </>
      );
 }

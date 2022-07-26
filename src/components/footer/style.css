@@ -19,13 +19,16 @@
      flex-direction: column;
      gap: var(--content-gap);
 }
-.footer-content-cl svg path{
+
+.footer-content-cl svg path {
      fill: white;
      color: white;
 }
-.footer-content-cl p{
+
+.footer-content-cl p {
      color: rgba(255, 255, 255, 0.7);
 }
+
 .footer-content-cl.links {
      gap: 20px;
      align-items: center;
@@ -56,11 +59,12 @@
 }
 
 @media screen and (max-width: 1160px) {
-     .footer-content{
+     .footer-content {
           align-items: center;
           gap: var(--content-gap);
      }
-     .footer-content-cl{
+
+     .footer-content-cl {
           width: 100%;
           align-items: center;
      }

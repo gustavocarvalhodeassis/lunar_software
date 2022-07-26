@@ -81,45 +81,25 @@ const NavBar = () => {
                         {
                             navbarData.map((item, index) => {
                                 return (
-                                    <div key={index}>{
-                                        item.name === 'Sobre' ? <a href='/#about'>
-                                            <button key={index}>
-                                                <li
-                                                    onClick={
-                                                        () => {
-                                                            toggleMenu()
-                                                        }
+                                    <Link to={item.link}>
+                                        <button
+                                            key={index}>
+                                            <li
+                                                onClick={
+                                                    () => {
+                                                        toggleMenu()
                                                     }
-                                                >
-                                                    {item.name}
-                                                </li>
-                                            </button>
-                                        </a>
-                                            :
-                                            <Link to={item.link} >
-                                                <button key={index}>
-                                                    <li
-                                                        onClick={
-                                                            () => {
-                                                                toggleMenu()
-                                                            }
-                                                        }
-                                                    >
-                                                        {item.name}
-                                                    </li>
-                                                </button>
-                                            </Link>
-                                    }</div>
+                                                }
+                                            >
+                                                {item.name}
+                                            </li>
+                                        </button>
+                                    </Link>
                                 )
                             })
                         }
-                        <Link to={'/integrar'}>
+                        <Link to={'/lunarteste/integrar'}>
                             <button
-                                onClick={
-                                    () => {
-                                        toggleMenu()
-                                    }
-                                }
                                 className='btn filled-btn'>
                                 Integrar!
                             </button>

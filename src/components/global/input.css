@@ -30,3 +30,9 @@
      justify-content: end;
      width: 100%;
 }
+
+.check-box{
+     display: flex;
+     align-items: center;
+     gap: 15px;
+} 

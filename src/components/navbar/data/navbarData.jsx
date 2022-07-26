@@ -1,14 +1,14 @@
 export const navbarData = [
     {
-        link: '/',
+        link: '/lunarteste',
         name: 'Início',
     },
     {
-        link: '#about',
+        link: '/#about',
         name: 'Sobre',
     },
     {
-        link: '/',
+        link: '/lunarteste',
         name: 'Paineis',
     },
 ]

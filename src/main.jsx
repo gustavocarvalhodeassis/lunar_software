@@ -9,12 +9,9 @@ import './components/global/integrate.css'
 import './components/global/systemImages.css'
 import './components/global/systemReports.css'
 import Router from './router'
-import NavBar from './components/navbar/navbar'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
     <Router />
-    {/*<Footer /> */}
   </React.StrictMode>
 )
