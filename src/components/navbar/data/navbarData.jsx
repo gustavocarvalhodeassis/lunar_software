@@ -1,6 +1,6 @@
 export const navbarData = [
     {
-        link: '/lunarteste',
+        link: '/',
         name: 'Início',
     },
     {
@@ -8,7 +8,7 @@ export const navbarData = [
         name: 'Sobre',
     },
     {
-        link: '/lunarteste',
+        link: '/',
         name: 'Paineis',
     },
 ]

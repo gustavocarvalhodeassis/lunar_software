@@ -4,6 +4,7 @@ import { navbarData } from './data/navbarData'
 import { CgMenu, CgClose } from 'react-icons/cg'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { integrateRoute } from '../../router';
 
 const NavBar = () => {
 
@@ -98,7 +99,7 @@ const NavBar = () => {
                                 )
                             })
                         }
-                        <Link to={'/lunarteste/integrar'}>
+                        <Link to={integrateRoute}>
                             <button
                                 className='btn filled-btn'>
                                 Integrar!
