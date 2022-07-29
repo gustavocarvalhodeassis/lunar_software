@@ -1,22 +1,34 @@
-import './style.css'
+import TextField from '@mui/material/TextField'
 import InputMask from 'react-input-mask'
 
-const numberConvert = (str) => str.replace(/[^0-9]/g, '')
 
-const MaskedInput = ({value, onChange, mask, name, placeholder, className, required, readOnly}) => {
-
-     function handleChange(event) {
-          onChange({
-               ...event,
-               target: {
-                    ...event.target,
-                    value: numberConvert(event.target.value)
-               }
-          })
-     }
+const MaskedInput = ({
+     mask,
+     name,
+     placeholder,
+     required,
+     maxLength,
+     minLength,
+     disabled
+}) => {
 
      return (
-          <InputMask name={name} value={value} onChange={handleChange} className={className} mask={mask} placeholder={placeholder} required={required} readOnly={readOnly}/>
+          <InputMask mask={mask} disabled={disabled} maskChar={''}>
+               {
+                    () =>
+                         <TextField
+                              className={'input-grid'}
+                              name={name}
+                              disabled={disabled}
+                              label={placeholder}
+                              variant="filled"
+                              placeholder={placeholder}
+                              required={required}
+                              maxLength={maxLength}
+                              minLength={minLength}
+                         />
+               }
+          </InputMask>
      );
 }
 

@@ -16,16 +16,10 @@ const Router = () => {
         <BrowserRouter>
             <NavBar />
             <Routes>
-<<<<<<< Updated upstream
                 <Route exact element={<Home />} path={'/'} />
-                <Route exact element={<IntegrateChose />} path={'integrar'} />
-                <Route exact element={<IntegrateRepresentante />} path={'/integrar/representante'} />
-=======
-                <Route exact element={<Home />} path={'/lunarteste'} />
-                <Route element={<IntegrateRepresentante />} path={'/lunarteste/integrar/representante'} />
-                <Route element={<IntegrateCliente />} path={'/lunarteste/integrar/cliente'} />
-                <Route element={<IntegrateChose />} path={'/lunarteste/integrar'} />
->>>>>>> Stashed changes
+                <Route element={<IntegrateRepresentante />} path={'/integrar/representante'} />
+                <Route element={<IntegrateCliente />} path={'/integrar/cliente'} />
+                <Route element={<IntegrateChose />} path={'/integrar'} />
             </Routes>
             <Footer />
         </BrowserRouter>

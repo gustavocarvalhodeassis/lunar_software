@@ -82,7 +82,7 @@ const NavBar = () => {
                         {
                             navbarData.map((item, index) => {
                                 return (
-                                    <Link to={item.link}>
+                                    <Link key={index} to={item.link}>
                                         <button
                                             key={index}>
                                             <li

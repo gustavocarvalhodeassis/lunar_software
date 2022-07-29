@@ -6,7 +6,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '3',
           inputMaxLength: '161',
-          required: 'required',
+          required: true
      },
      {
           inputName: 'cnpj',
@@ -15,7 +15,7 @@ export const cadRepData = [
           inputType: '',
           inputMinLength: '18',
           inputMaxLength: '18',
-          required: 'required'
+          required: true
      },
      {
           inputName: 'ie_free',
@@ -24,7 +24,7 @@ export const cadRepData = [
           inputType: 'checkbox',
           inputMinLength: '',
           inputMaxLength: '',
-          required: ''
+          required: false
      },
      {
           inputName: 'ie',
@@ -33,7 +33,7 @@ export const cadRepData = [
           inputType: 'number',
           inputMinLength: '',
           inputMaxLength: '',
-          required: ''
+          required: false
      },
      {
           inputName: 'cpf',
@@ -42,7 +42,7 @@ export const cadRepData = [
           inputType: '',
           inputMinLength: '14',
           inputMaxLength: '14',
-          required: 'required',
+          required: true,
      },
      {
           inputName: 'email',
@@ -51,7 +51,7 @@ export const cadRepData = [
           inputType: 'email',
           inputMinLength: '5',
           inputMaxLength: '',
-          required: 'required'
+          required: true
      },
      {
           inputName: 'phone',
@@ -60,7 +60,7 @@ export const cadRepData = [
           inputType: '',
           inputMinLength: '17',
           inputMaxLength: '17',
-          required: 'required'
+          required: true
      },
      {
           inputName: 'address',
@@ -69,7 +69,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '3',
           inputMaxLength: '161',
-          required: ''
+          required: false
      },
      {
           inputName: 'address_number',
@@ -78,7 +78,7 @@ export const cadRepData = [
           inputType: 'number',
           inputMinLength: '1',
           inputMaxLength: '10',
-          required: ''
+          required: false
      },
      {
           inputName: 'district',
@@ -87,7 +87,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '3',
           inputMaxLength: '161',
-          required: ''
+          required: false
      },
      {
           inputName: 'address_complement',
@@ -96,7 +96,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '3',
           inputMaxLength: '161',
-          required: ''
+          required: false
      },
      {
           inputName: 'city',
@@ -105,7 +105,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '3',
           inputMaxLength: '161',
-          required: ''
+          required: false
      },
      {
           inputName: 'uf',
@@ -114,7 +114,7 @@ export const cadRepData = [
           inputType: 'text',
           inputMinLength: '2',
           inputMaxLength: '2',
-          required: ''
+          required: false
      },
      {
           inputName: 'cep',
@@ -123,6 +123,6 @@ export const cadRepData = [
           inputType: '',
           inputMinLength: '10',
           inputMaxLength: '10',
-          required: ''
+          required: false
      },
 ]

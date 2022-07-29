@@ -6,6 +6,7 @@
     justify-content: center;
     background-color: var(--light-color);
     position: fixed;
+    z-index: 50000;
 }
 
 .navigation {

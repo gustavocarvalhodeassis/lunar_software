@@ -1,8 +1,8 @@
 .ipt {
-     padding-left: 7px;
-     padding-top: 10px;
+     padding-left: 15px;
+     padding-top: 15px;
      font-weight: bold;
-     padding-bottom: 10px;
+     padding-bottom:15px;
      background-color: #FAFAFB;
      outline: 3px #DADAE2 solid;
      border-radius: var(--content-border-radius);
@@ -12,6 +12,8 @@
 
 .input-grid {
      width: 100%;
+     color: var('--accent-color');
+     z-index: -500000;
 }
 
 .ipt:focus {

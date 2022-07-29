@@ -1,26 +1,41 @@
 import { CgArrowLeft } from 'react-icons/cg'
 import { Link } from "react-router-dom";
 import { integrateRoute } from "../../../../router";
-import InputMask from 'react-input-mask'
 import MaskedInput from '../../../global/inputs/maskedInput/maskedInput';
-import { useState } from 'react';
 import { cadRepData } from '../../../../data/integrateData';
+import { Checkbox, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
+import { useState } from 'react';
 
 const IntegrateGetInfoRep = () => {
 
-     const [cnpj, setCnpj] = useState('')
+     const item = cadRepData;
+     let [ieIsenta, setIeIsenta] = useState('0')
 
-     let [lockIe, setLockIe] = useState(false)
+     let [inputState, setInputState] = useState(true)
 
-     let lockIeValue = useState('')
+     const [inputValue, setInputValue] = useState("");
 
-     const toggleIe = () => {
-          if (lockIe === true) {
-               setLockIe((lockIe = false))
-               lockIeValue = ''
+     const handleUserInput = (e) => {
+          setInputValue(e.target.value);
+     };
+
+     // Reset Input Field handler
+     const resetInputField = () => {
+          setInputValue("");
+     };
+
+
+     const lockIe = () => {
+
+          if (ieIsenta === '0') {
+               setIeIsenta((ieIsenta = '1'))
+               setInputState((inputState = false))
           } else {
-               setLockIe((lockIe = true))
+               setIeIsenta((ieIsenta = '0'))
+               setInputState((inputState = true))
+               resetInputField()
           }
+
      }
 
      return (
@@ -36,85 +51,89 @@ const IntegrateGetInfoRep = () => {
                <form className="integrate-get-info-form" action={'../painel/register-reseller.php'} method='post' >
                     <div className='place-1'>
                          <div className='user-type'>
-                              <label>Pessoa Física: </label><input type="radio" name="is_pj" value="0" /><br />
-                              <label>Pessoa Jurídica: </label><input type="radio" name="is_pj" value="1" /><br /><br />
+                              <FormControl>
+                                   <FormLabel id="demo-radio-buttons-group-label">Tipo de pessoa</FormLabel>
+                                   <RadioGroup
+                                        aria-labelledby="demo-radio-buttons-group-label"
+                                        defaultValue="female"
+                                        name="radio-buttons-group"
+                                        row={true}
+                                   >
+                                        <FormControlLabel value="is_pj" control={<Radio />} label="Pessoa Física" />
+                                        <FormControlLabel value="is_pf" control={<Radio />} label="Pessoa Jurídica" />
+                                   </RadioGroup>
+                              </FormControl>
                          </div>
                          <p className='content-p'>
                               Algumas informações sobre sua empresa, logo a frente, informações para contato.
                          </p>
                          <div className='form-1'>
-                              {
-                                   cadRepData.slice(0, 4).map((item, index) => {
-                                        return (
-                                             <>{
-                                                  index === 2 ?
-                                                       <label
-                                                            className='check-box'
-                                                       >
-                                                            {item.inputPlaceholder}
-                                                            :
-                                                            <input
-                                                                 type={item.inputType}
-                                                                 name={item.inputName}
-                                                                 onChange={toggleIe}
-                                                                 value={lockIe}
-                                                            />
-                                                       </label>
-                                                       :
-                                                       <MaskedInput
-                                                            key={index}
-                                                            type={item.inputType}
-                                                            mask={item.inputMask}
-                                                            placeholder={item.inputPlaceholder}
-                                                            name={item.inputName}
-                                                            value={(event) => index === 3 && lockIe ? lockIeValue : event.target.value}
-                                                            required={item.required}
-                                                            className={'ipt input-grid'}
-                                                            readOnly={index === 3 ? lockIe : false}
-                                                       />
-                                             }</>
-                                        )
-                                   })
-                              }
+                              <MaskedInput
+                                   type={item[0].inputType}
+                                   mask={item[0].inputMask}
+                                   placeholder={item[0].inputPlaceholder}
+                                   name={item[0].inputName}
+                                   required={item[0].required}
+                                   minLength={item[0].inputMinLength}
+                                   maxLength={item[0].inputMaxLength}
+                              />
+                              <MaskedInput
+                                   type={item[1].inputType}
+                                   mask={item[1].inputMask}
+                                   placeholder={item[1].inputPlaceholder}
+                                   name={item[1].inputName}
+                                   required={item[1].required}
+                                   minLength={item[1].inputMinLength}
+                                   maxLength={item[1].inputMaxLength}
+                              />
+                              <FormControlLabel control={<Checkbox defaultChecked />} label="IE Isenta" value={ieIsenta} onChange={() => { lockIe() }} />
+                              <MaskedInput
+                                   type={item[3].inputType}
+                                   mask={item[3].inputMask}
+                                   placeholder={item[3].inputPlaceholder}
+                                   name={item[3].inputName}
+                                   disabled={inputState}
+                                   value={inputValue}
+                                   onChange={() => { handleUserInput() }}
+                                   required={item[3].required}
+                                   minLength={item[3].inputMinLength}
+                                   maxLength={item[3].inputMaxLength}
+                              />
+                              <MaskedInput
+                                   type={item[0].inputType}
+                                   mask={item[0].inputMask}
+                                   placeholder={item[0].inputPlaceholder}
+                                   name={item[0].inputName}
+                                   required={item[0].required}
+                                   minLength={item[0].inputMinLength}
+                                   maxLength={item[0].inputMaxLength}
+                              />
                          </div>
                     </div>
                     <input id='filled-basic' type={'hidden'} name='callback_url_success' value="../painel/cadastro-sucesso.html" />
-                    <div className='place-1'>
-                         <div className='user-type'>
-                              <label>Pessoa Física: </label><input type="radio" name="is_pj" value="0" /><br />
-                              <label>Pessoa Jurídica: </label><input type="radio" name="is_pj" value="1" /><br /><br />
-                         </div>
-                         <p className='content-p'>
-                              Algumas informações sobre sua empresa, logo a frente, informações para contato.
-                         </p>
-                         <div className='form-1'>
-                              <input name="name" type='text' className='ipt input-grid' placeholder='Nome' />
-                              <MaskedInput value={cnpj} onChange={(event) => setCnpj(event.target.value)} mask='99.999.999/9999-99' name="cnpj" className='ipt input-grid' placeholder='CNPJ' />
-                              <input name="company_name" type='text' className='ipt input-grid' placeholder='Razão Social' />
-                              <input name="trading_name" type='text' className='ipt input-grid' placeholder='Fantasia' />
-                              <label className='check-box'>
-                                   Inscrição estadual ISENTA
-                                   <input name="ie_free" type='checkbox' placeholder='Incrição Estadual ISENTA' />
-                              </label>
-                              <input name="ie" type='number' className='ipt input-grid' placeholder='Incrição Estadual' />
-                              <input name="cpf" type='number' className='ipt input-grid' placeholder='CPF' />
-                         </div>
-                    </div>
+
                     <div className="place-2">
                          <div className='form-2'>
-                              <input name="email" type='email' className='ipt input-grid' placeholder='Email' />
-                              <input name="password" type="password" className='ipt input-grid' />
-                              <input name="phone" type='number' className='ipt input-grid' placeholder='Numero de telefone' />
-                              <input name="address" type='text' className='ipt input-grid' placeholder='Endereço' />
-                              <input name="address_number" type='number' className='ipt input-grid' placeholder='Numero' />
-                              <input type='text' className='ipt input-grid' placeholder='Bairro' />
-                              <input name="address_complement" type='text' className='ipt input-grid' placeholder='Complemento' />
-                              <input name="city" type='text' className='ipt input-grid' placeholder='Cidade' />
-                              <input name="uf" type='text' className='ipt input-grid' placeholder='Estado(UF)' />
-                              <input name="cep" type='number' className='ipt input-grid' placeholder='CEP' />
+                              {
+                                   cadRepData.slice(5.13).map((item, index) => {
+                                        return (
+                                             <MaskedInput
+                                                  key={index}
+                                                  type={item.inputType}
+                                                  mask={item.inputMask}
+                                                  placeholder={item.inputPlaceholder}
+                                                  name={item.inputName}
+                                                  required={item.required}
+                                                  minLength={item.inputMinLength}
+                                                  maxLength={item.inputMaxLength}
+                                             />
+                                        )
+                                   })
+                              }
                               <div className='input-form-action-button'>
                                    <input type={'button'} className='btn text-btn' value="Quero ser cliente Lunar Software." />
                                    <input type={'submit'} className='btn filled-btn' value="Enviar" />
+
                               </div>
                          </div>
                     </div>
