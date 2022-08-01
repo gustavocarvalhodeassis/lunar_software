@@ -1,27 +1,83 @@
-.ipt {
+.lunar-form {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 60px;
+}
+
+.lunar-form-cl {
+     width: 47%;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.lunar-input {
+     width: 100%;
      padding-left: 15px;
      padding-top: 15px;
-     font-weight: bold;
-     padding-bottom:15px;
-     background-color: #FAFAFB;
-     outline: 3px #DADAE2 solid;
+     font-weight: normal;
+     font-size: 1.1rem;
+     color: var(--dark-color);
+     padding-bottom: 15px;
+     background-color: transparent;
+     outline: 2px #DADAE2 solid;
      border-radius: var(--content-border-radius);
      border: none;
      transition: var(--transition);
 }
 
-.input-grid {
-     width: 100%;
-     color: var('--accent-color');
-     z-index: -500000;
+.lunar-input:focus {
+     outline: 3px var(--accent-color) solid;
 }
 
-.ipt:focus {
-     outline: 4px var(--accent-color) solid;
+.lunar-input:disabled {
+     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.ipt:hover {
-     background-color: #F1F1F4;
+.lunar-input:disabled:hover {
+     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.lunar-input:hover {
+     background-color: rgba(0, 0, 0, 0.02);
+}
+
+.ratio-selection {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     flex-wrap: wrap;
+}
+
+.ratio {
+     width: 18px;
+     height: 18px;
+     cursor: pointer;
+}
+
+.ratio-content {
+     gap: 5px;
+     display: flex;
+     align-items: center;
+     font-weight: bold;
+}
+
+@media screen and (max-width: 1160px) {
+     .lunar-form-cl {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+}
+
+@media screen and (max-width:960px) {
+     .lunar-form-cl {
+          width: 95%;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
 }
 
 .input-form-action-button {
@@ -33,8 +89,23 @@
      width: 100%;
 }
 
-.check-box{
+.checkbox-content {
      display: flex;
      align-items: center;
      gap: 15px;
-} 
+     cursor: pointer;
+     width: fit-content;
+}
+
+.checkbox {
+     width: 18px;
+     height: 18px;
+     cursor: pointer;
+}
+
+.etapa-1, .etapa-2 {
+     display: none;
+}
+.etapa-1.active, .etapa-2.active {
+     display: flex;
+}
