@@ -60,10 +60,13 @@
   }
 }
 
+input, label{
+  color: var(--dark-color);
+}
+
 * {
   font-family: 'Poppins';
   scroll-behavior: smooth;
-  color: var(--dark-color);
 }
 
 a{

@@ -1,6 +1,6 @@
 import { CgUser, CgBriefcase } from 'react-icons/cg'
-import { Link, useNavigate } from 'react-router-dom'
-import { integrateRepRoute, integrateCliRoute } from '../../../router';
+import { Link } from 'react-router-dom'
+import { integrateRepRoute } from '../../../router';
 
 const IntegrateIntro = () => {
       return (

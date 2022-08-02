@@ -63,6 +63,7 @@ const Footer = () => {
                                    </button>
                               </Link>
                               <Link to='/integrar'>
+
                                    <button className='btn filled-btn'>
                                         Integrar!
                                    </button>
