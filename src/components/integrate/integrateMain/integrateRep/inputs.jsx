@@ -166,12 +166,37 @@ const RepInputs = () => {
                          ps_type === 1
                               ?
                               <>
-                                   <LunarInput className={'lunar-input'} name={'cnpj'} required={true} placeholder={'Nome e Sobrenome *'} />
-                                   <LunarInput className={'lunar-input'} name={'ie'} mask={'999.999.999-99'} required={true} placeholder={'CPF *'} />
+
+                                   {/*NAME SURNAME IF PJ INPUT*/}
+
+                                   <LunarInput
+                                        className={'lunar-input'}
+                                        name={'cnpj'}
+                                        required={true}
+                                        placeholder={'Nome e Sobrenome *'}
+                                   />
+
+                                   {/*FIM NAME SURNAME IF PJ INPUT*/}
+
+                                   {/*CPF IF PJ INPUT*/}
+
+                                   <LunarInput
+                                        className={'lunar-input'}
+                                        name={'ie'}
+                                        mask={'999.999.999-99'}
+                                        required={true}
+                                        placeholder={'CPF *'}
+                                   />
+
+                                   {/*FIM CPF IF PJ INPUT*/}
+
                               </>
                               :
                               <></>
                     }
+
+                    {/*CONTACT INPUTS*/}
+
                     <LunarInput
                          className={'lunar-input'}
                          name={'ie'}
@@ -186,9 +211,14 @@ const RepInputs = () => {
                          placeholder={'Numero de Telefone *'}
                          inputmask={'(99) 9 9999-9999'}
                     />
+
+                    {/*FIM CONTACT INPUTS*/}
+
                     <div className="input-form-action-button">
                          <Link to='/'>
-                              <button className='btn text-btn'>
+                              <button
+                                   className='btn text-btn'
+                              >
                                    Quero utilizar Lunar Software
                               </button>
                          </Link>
@@ -204,21 +234,100 @@ const RepInputs = () => {
                {/*ETAPA 2*/}
 
                <div className={"lunar-form-cl " + etapa2}>
-                    <LunarInput className={'lunar-input'} mask={'99.999-999'} name={'cnpj'} placeholder={'CEP'} />
-                    <LunarInput className={'lunar-input'} name={'ie'} placeholder={'Endereço'} />
-                    <LunarInput className={'lunar-input'} name={'ie'} placeholder={'Bairro'} />
-                    <LunarInput className={'lunar-input'} name={'ie'} placeholder={'Numero'} />
+
+                    {/*CEP INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         mask={'99.999-999'}
+                         name={'cnpj'}
+                         placeholder={'CEP'}
+                    />
+
+                    {/*FIM CEP INPUT*/}
+
+                    {/*ENDEREÇO INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'ie'}
+                         placeholder={'Endereço'}
+                    />
+
+                    {/*FIM ENDEREÇO INPUT*/}
+
+                    {/*BAIRRO INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'ie'}
+                         placeholder={'Bairro'}
+                    />
+
+                    {/*FIM BAIRRO INPUT*/}
+
+                    {/*NUMERO INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'ie'}
+                         placeholder={'Numero'}
+                    />
+
+                    {/*FIM NUMERO INPUT*/}
                </div>
                <div className={"lunar-form-cl " + etapa2}>
-                    <LunarInput className={'lunar-input'} name={'cnpj'} type="text" placeholder={'UF'} minLength={2} maxLength={2} />
+
+                    {/*UF INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'cnpj'}
+                         type="text"
+                         placeholder={'UF'}
+                         minLength={2}
+                         maxLength={2}
+                    />
+
+                    {/*FIM UF INPUT*/}
+
                     <label>
                          Senha para login ao painel do representante. * Guarde esta senha com segurança! *
                     </label>
-                    <LunarInput className={'lunar-input'} name={'cnpj'} required={true} placeholder={'Senha *'} />
-                    <LunarInput className={'lunar-input'} name={'cnpj'} required={true} placeholder={'Confirmar senha *'} />
+
+                    {/*SENHA INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'cnpj'}
+                         required={true}
+                         placeholder={'Senha *'}
+                    />
+
+                    {/*CONFIRM INPUT*/}
+
+                    <LunarInput
+                         className={'lunar-input'}
+                         name={'cnpj'}
+                         required={true}
+                         placeholder={'Confirmar senha *'}
+                    />
+
+                    {/*FIM SENHA INPUT*/}
+
                     <div className="input-form-action-button">
-                         <button onClick={() => backEtapa()} className='btn text-btn'>Voltar</button>
-                         <button type='submit' className='btn filled-btn'>Próximo</button>
+                         <button
+                              onClick={() => backEtapa()}
+                              className='btn text-btn'
+                         >
+                              Voltar
+                         </button>
+                         <button
+                              type='submit'
+                              className='btn filled-btn'
+                         >
+                              Próximo
+                         </button>
                     </div>
                </div>
 
